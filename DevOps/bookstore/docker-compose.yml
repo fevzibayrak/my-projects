@@ -18,3 +18,12 @@ services:
     restart: always
     depends_on:
       - database
+    ports:
+      - "80:80"
+    networks:
+      - clarusnet
+
+networks:
+  clarusnet:
+    driver: bridge
+    
